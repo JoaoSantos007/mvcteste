@@ -4,6 +4,8 @@ const cors = require('cors');
 const pessoaRoutes = require('./src/routes/pessoaRoutes');
 const produtoRoutes = require('./src/routes/produtosRoutes');
 const jogadorRoutes = require('./src/routes/jogadorRoutes')
+const timeRoutes = require('./src/routes/timeRoutes')
+const selecaoRoutes = require('./src/routes/selecaoRoutes')
 
 const app = express()
 app.use(cors())
@@ -11,6 +13,8 @@ app.use(express.json())
 app.use(pessoaRoutes)
 app.use(produtoRoutes)
 app.use(jogadorRoutes)
+app.use(timeRoutes)
+app.use(selecaoRoutes)
 
 const PORT = process.env.PORT
 
